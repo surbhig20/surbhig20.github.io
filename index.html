@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Quiz Up!</title>
+    <link href="css/quiz1.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script> 
+	</head>
+<body id="page-top" class="index" onload="date12()">
+
+    <nav class="headingg headingg-default headingg-fixed-top">
+        <div class="container">
+			<div class="headingg-header page-scroll">
+               
+                <a class="headingg-brand" href="#page-top">Let's Quiz Up!</a>
+            </div>
+            <div class="collapse headingg-collapse" id="bs-example-headingg-collapse-1">
+                <ul class="nav headingg-nav headingg-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#test_status" id="topic"></a>
+                    </li>
+					<li class="page-scroll">
+                        <a href="#" id="date"></a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+       
+    </nav>
+    <header>
+        <div class="container">
+			<div class="ringer">
+				<div class="quizer">
+                    <h2 id="test_status" style="color:white;"></h2>
+					<section id="test" style="padding:30px;">
+					</section>      
+				</div>
+				<button type="button" class="btn btn-lg" id="test123" style="float:left; background-color:green;">0</button>
+				<button type="button" class="btn blacken btn-lg" onclick="start()">Start</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button type="button" class="btn blacken btn-lg" id="button2" onclick="stop()" >Stop</button>
+				<button type="button" style="float:right; background-color:red;" class="btn btn-lg" id="test12"  >0</button>
+				<br>
+				<br>
+			</div>
+       <div class="progress prog">
+  <div class="bar" id="bar"
+       ></div>
+</div>
+		</div>
+		
+    </header>	
+    <footer class="text-center">
+    
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Surbhi Anurag Gupta<br> 
+						E-mail: sgupta1@scu.edu<br>
+						<a href="https://www.facebook.com/surbhi.8">Connect On Facebook</a><br>
+						431 El Camino Real,
+						<br>Santa Clara-95050
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<script src="js/questions.js"></script>
+    <script src="js/test.js"></script>
+	<script>
+//Load the animation bar for progress in questions
+function rp()
+{
+	var d = (pos + 1)*1.0/questions.length*1.0;
+	console.log(d);
+	console.log(questions.length);
+	console.log(pos);
+		$('#bar').css({
+			 'width' : $('#test_status').width()* d
+		});
+			   }
+		
+	</script>
+    
+</body>
+
+</html>
